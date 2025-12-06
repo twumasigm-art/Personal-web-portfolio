@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
 
 body {
-    background: linear-gradient(135deg, #f6c171, #fcf3a1, rgb(129, 129, 228));
+    background-image: url('https://image2url.com/images/1765049724588-3f1a6c98-ac6f-4461-a132-5f6f841e492a.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
     margin: 0;
     font-family: "Chewy", system-ui;
 }
