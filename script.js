@@ -83,35 +83,29 @@ const photographs = [
 function displayPhotographs() {
     const photoGrid = document.getElementById('photo-grid');
     
-    // Clear existing content
-    photoGrid.innerHTML = '';
+    if (photoGrid && photoGrid.children.length === 0) {
     
-    // Create a card for each photo
     photographs.forEach(photo => {
         const photoItem = document.createElement('div');
         photoItem.className = 'photo-item';
        
-        // Create image element
         const img = document.createElement('img');
         img.src = photo.image;
         img.alt = photo.caption;
         
-        // Make image clickable to open in new tab
         photoItem.style.cursor = 'pointer';
         photoItem.onclick = () => window.open(photo.image, '_blank');
         
-        // Create caption
         const caption = document.createElement('div');
         caption.className = 'photo-caption';
         caption.textContent = photo.caption;
         
-        // Assemble the photo item
         photoItem.appendChild(img);
         photoItem.appendChild(caption);
         
-        // Add to grid
         photoGrid.appendChild(photoItem);
     });
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
